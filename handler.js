@@ -38,12 +38,14 @@ export const setupMessageHandler = (sock, loadedPlugins, globalConfig, userLimit
                 let args = '';
 
                 const prefix = globalConfig.prefix;
+                const body = messageBody.trim();
 
                 if (lowerCaseBody.startsWith(prefix)) {
                     const contentWithoutPrefix = lowerCaseBody.slice(prefix.length).trim();
                     const parts = contentWithoutPrefix.split(' ');
                     command = parts[0];
-                    args = parts.slice(1).join(' ');
+                    const argsStartIndex = prefix.length + command.length;
+                    args = body.slice(argsStartIndex).trim();
                 } else {
                     console.log(`[INFO] Pesan non-perintah (tanpa prefix) dari ${sender}: "${messageBody}"`);
                     continue;
