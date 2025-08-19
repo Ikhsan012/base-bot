@@ -12,7 +12,7 @@ const globalConfig = {
     prefix: "/",
     limit: {
         enable: true,
-        maxDaily: 5,
+        maxDaily: 100,
         resetIntervalMs: 24 * 60 * 60 * 1000,
         message: "Maaf, Anda telah mencapai batas penggunaan %maxDaily%x untuk perintah ini dalam %resetHours% jam terakhir. Coba lagi dalam sekitar %remainingTime%."
     },
