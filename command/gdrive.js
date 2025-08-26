@@ -1,4 +1,4 @@
-import { GetGD } from "../lib/gdrive-api.js";
+import { GetGD } from "../lib/scrape/gdrive-api.js";
 import axios from "axios";
 
 const handler = async (m, plug) => {
