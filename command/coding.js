@@ -4,7 +4,7 @@ const handler = async (m, plug) => {
     const { sock, args, config } = plug
     const userjid = m.key.remoteJid
     if (!args) {
-        return sock.sendMessage(userjid, { text: `Contoh: ${config.prefix}deepai halo, apa kabar?` }, { quoted: m });
+        return sock.sendMessage(userjid, { text: `Contoh: ${config.prefix}coding halo, apa itu html?` }, { quoted: m });
     }
     await sock.sendMessage(userjid, { text: config.mess.wait }, { quoted: m });
 
